@@ -172,6 +172,8 @@ ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
                 size = 5, linewidth = 1, boxlinewidth = 0.6) 
 ```
 
+## Penguins {auto-animate=true}
+
 ```{r}
 ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point(alpha = 0.2) +
