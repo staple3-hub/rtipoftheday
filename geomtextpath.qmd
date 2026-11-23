@@ -241,3 +241,9 @@ Lots more can be done with geomtextpath!
 - annotations
 - clocks
 ::: 
+
+## References {auto-animate=true}
+
+https://allancameron.github.io/geomtextpath/
+
+## Thank you!!!
