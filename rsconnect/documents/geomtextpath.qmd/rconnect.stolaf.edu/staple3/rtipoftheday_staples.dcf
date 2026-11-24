@@ -6,7 +6,7 @@ server: rconnect.stolaf.edu
 hostUrl: https://rconnect.stolaf.edu/__api__
 appId: 1546
 appGuid: d0f388a9-cab4-4c7c-a987-9e88a4d81141
-bundleId: 4817
+bundleId: 4818
 url: https://rconnect.stolaf.edu/content/d0f388a9-cab4-4c7c-a987-9e88a4d81141/
 version: 1
 asMultiple: FALSE
