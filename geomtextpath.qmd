@@ -156,7 +156,10 @@ geom_smooth	= geom_textsmooth =	geom_labelsmooth
 ## Penguins {auto-animate=true}
 
 ```{r}
-ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+ggplot(penguins, aes(
+  x = bill_length_mm, 
+  y = body_mass_g, 
+  color = species)) +
   geom_point() +
   geom_smooth(se = FALSE) 
 ```
@@ -165,11 +168,21 @@ This is good... but what if we had the species name ON the lines?
 
 ## Penguins {auto-animate=true}
 
-```{.r code-line-numbers="3-4"}
-ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+```{.r code-line-numbers="6-14"}
+ggplot(penguins, aes(
+x = bill_length_mm, 
+y = body_mass_g, 
+color = species)) +
   geom_point(alpha = 0.2) +
-  geom_labelsmooth(aes(label = species), text_smoothing = 50, fill = "#F6F6FF",
-                size = 5, linewidth = 1, boxlinewidth = 0.6) 
+  geom_labelsmooth(
+  aes(
+  label = species
+  ), 
+  text_smoothing = 50, 
+  fill = "#F6F6FF",
+  size = 5, 
+  linewidth = 1, 
+  boxlinewidth = 0.6) 
 ```
 
 ## Penguins {auto-animate=true}
@@ -188,11 +201,18 @@ No legend necessary!!
 
 Can also be used with density plots. 
 
-```{.r code-line-numbers="4"}
+```{.r code-line-numbers="7-11"}
 penguins |>
-  filter(species != "Chinstrap")|>
-ggplot(aes(x = body_mass_g, color = species, label = species))+
-  geom_textdensity(size = 4, fontface = 2, hjust = 0.2, vjust = 0.3)+
+filter(species != "Chinstrap")|>
+ggplot(aes(
+x = body_mass_g, 
+color = species, 
+label = species))+
+  geom_textdensity(
+  size = 4, 
+  fontface = 2, 
+  hjust = 0.2, 
+  vjust = 0.3)+
   theme(legend.position = "none")
 ```
 
@@ -212,11 +232,18 @@ ggplot(aes(x = body_mass_g, color = species, label = species))+
 
 Can also change *where* the text is on the line using hjust!
 
-```{.r code-line-numbers="4"}
+```{.r code-line-numbers="7-11"}
 penguins |>
-  filter(species != "Chinstrap")|>
-ggplot(aes(x = body_mass_g, color = species, label = species))+
-  geom_textdensity(size = 4, fontface = 2, hjust = "ymax", vjust = 0.3)+
+filter(species != "Chinstrap")|>
+ggplot(aes(
+x = body_mass_g, 
+color = species, 
+label = species))+
+  geom_textdensity(
+  size = 4, 
+  fontface = 2, 
+  hjust = "ymax", 
+  vjust = 0.3)+
   theme(legend.position = "none")
 ```
 
